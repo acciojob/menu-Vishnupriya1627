@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import Menu from "./Menu.js";
 import "./App.css";
 
@@ -49,7 +49,7 @@ function App() {
       title: "oreo dream",
       category: "shakes",
       price: 18.99,
-      img: "https://images.unsplash.com/photo-1619158401201-8fa932695178?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JlbyUyMHNoYWtlfGVufDB8fDB8fHww",
+      img: "https://images.unsplash.com/photo-1619158401201-8fa932695178?w=400",
       desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
     },
     {
@@ -78,45 +78,43 @@ function App() {
     },
   ];
 
-  const [filter,setFilter] = useState(dishes);
+  const [filter, setFilter] = useState(dishes);
 
-  function all(){
+  function all() {
     setFilter(dishes);
   }
-
-  function breakfast(){
-    setFilter(
-      dishes.filter((dish)=>dish.category=='breakfast')
-    )
+  function breakfast() {
+    setFilter(dishes.filter((dish) => dish.category === "breakfast"));
   }
-
-  function lunch(){
-    setFilter(
-      dishes.filter((dish)=>dish.category=='lunch')
-    )
+  function lunch() {
+    setFilter(dishes.filter((dish) => dish.category === "lunch"));
   }
-
-  function shakes(){
-    setFilter(
-      dishes.filter((dish)=>dish.category=='shakes')
-    )
+  function shakes() {
+    setFilter(dishes.filter((dish) => dish.category === "shakes"));
   }
 
   return (
-    <div>
+    <div id="main">
+      {" "}
       <h1>Our Menu</h1>
       <div id="button_container">
-        <button id="All" onClick={all}>All</button>
-        <button id="filter-btn-1" onClick={breakfast}>Breakfast</button>
-        <button id="filter-btn-2" onClick={lunch}>Lunch</button>
-        <button id="filter-btn-3" onClick={shakes}>Shakes</button>
+        <button id="All" onClick={all}>
+          All
+        </button>
+        <button id="filter-btn-1" onClick={breakfast}>
+          Breakfast
+        </button>
+        <button id="filter-btn-2" onClick={lunch}>
+          Lunch
+        </button>
+        <button id="filter-btn-3" onClick={shakes}>
+          Shakes
+        </button>
       </div>
-      <div style={{display:"flex", flexWrap:"wrap"}}>
-        {
-          filter.map((dish)=>(
-            <Menu key={dish.id} data={dish}/>
-          ))
-        }
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {filter.map((dish) => (
+          <Menu key={dish.id} data={dish} />
+        ))}
       </div>
     </div>
   );
