@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#dish_container{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+#img_conatiner{
+    width: 180px;
+    height: 130px;
+    margin: 10px;
+    border: 3.5px solid #C59D5F;
+    border-radius: 4px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#title{
+    margin-top: 10px;
+    display: inline-block;
+    width: 208px;
+}
+
+#text_container{
+    height: 100%;
+    width: 300px;
+    gap: 10px;
+}
+
+#price{
+    display: flex;
+    gap: 10px;
+}
+
+#price div{
+    margin: 10px;
+}
+
+#title::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 1px;
+  background-color: #C59D5F;
+  margin: 10px auto 0;
+}
+
+#desc{
+    margin-top: 20px;
+    line-height: 1.3;
+    color: #353b3f;
+    word-spacing: 1.2px;
+}

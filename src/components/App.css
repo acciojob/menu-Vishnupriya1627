@@ -1,0 +1,28 @@
+h1{
+  text-align: center;
+  /* text-decoration: underline; */
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: #C59D5F;
+  margin: 10px auto 0;
+}
+
+#button_container{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+  margin: 10px;
+  color: #C59D5F;
+  font-weight: 600;
+  font-size: 20px;
+}
